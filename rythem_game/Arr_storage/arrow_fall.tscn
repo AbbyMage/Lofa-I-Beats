@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1ivrwu5enh5"]
+
+[ext_resource type="PackedScene" uid="uid://by1p3fy77kl4r" path="res://Arr_storage/Arr_Catch_Left.tscn" id="1_omuk4"]
+[ext_resource type="Script" path="res://scripts/Arr_Fall.gd" id="2_wyht3"]
+
+[node name="Falling_Arr" instance=ExtResource("1_omuk4")]
+script = ExtResource("2_wyht3")
+
+[node name="NewBetterArrows" parent="." index="0"]
+position = Vector2(65, 57)
+frame = 4
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(50, 52)

@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://db8juxp2261lt"]
+
+[ext_resource type="PackedScene" uid="uid://dcykl28nwbofe" path="res://button.tscn" id="1_r78vi"]
+
+[node name="Button" instance=ExtResource("1_r78vi")]
+offset_left = 10.0
+offset_top = 13.0
+offset_right = 194.0
+offset_bottom = 59.0
+text = "
+lv4 Butter safe than sorry
+lv3 Rye so serious?
+lv5 Last but not yeast. 
+bready set go"
+
+[node name="NoPainNoGrain" parent="." index="0"]
+visible = false
+position = Vector2(-171, -37)
+scale = Vector2(0.0800971, 0.0706522)

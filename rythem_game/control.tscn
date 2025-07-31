@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://uq3c3iq0ogk3"]
+
+[ext_resource type="Script" path="res://scripts/skill_check_bar.gd" id="1_a4111"]
+
+[sub_resource type="Curve2D" id="Curve2D_iu4rp"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a4111")
+
+[node name="Bar" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 110.0
+offset_right = 376.0
+offset_bottom = 150.0
+
+[node name="Goodzone" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 267.0
+offset_top = 110.0
+offset_right = 344.0
+offset_bottom = 150.0
+color = Color(0, 1, 0.0980392, 1)
+
+[node name="perfect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 110.0
+offset_right = 349.0
+offset_bottom = 150.0
+color = Color(0, 0, 1, 1)
+
+[node name="pointer" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 110.0
+offset_right = 144.0
+offset_bottom = 150.0
+color = Color(0.708293, 0.20369, 0.309243, 1)
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_iu4rp")

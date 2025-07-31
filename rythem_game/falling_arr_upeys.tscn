@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://basj7riyo3xvc"]
+
+[ext_resource type="PackedScene" uid="uid://w133jugyc5es" path="res://falling arrows/falling_arr_down.tscn" id="1_ut0ao"]
+
+[node name="Falling_Arr" instance=ExtResource("1_ut0ao")]
+
+[node name="NewBetterArrows" parent="." index="0"]
+frame = 6

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://buhvjpg42ayho"]
+
+[ext_resource type="Script" path="res://scripts/birb.gd" id="1_t6at6"]
+[ext_resource type="Texture2D" uid="uid://b6h5ip28gm6n6" path="res://resorces/dihgion-justpng.png" id="2_vly28"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h643l"]
+radius = 15.0
+height = 42.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_t6at6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_h643l")
+
+[node name="Dihgion-justpng" type="Sprite2D" parent="."]
+position = Vector2(-11, -2)
+scale = Vector2(0.0532227, 0.0601807)
+texture = ExtResource("2_vly28")

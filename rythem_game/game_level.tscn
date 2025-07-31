@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg7sjsnps4b0p"]
+
+[ext_resource type="PackedScene" uid="uid://dcykl28nwbofe" path="res://button.tscn" id="1_4rikn"]
+
+[node name="Node2D" type="Node2D"]
+rotation = 0.00167188
+
+[node name="Button" parent="." instance=ExtResource("1_4rikn")]
+offset_left = 448.195
+offset_top = 116.251
+offset_right = 632.195
+offset_bottom = 162.251

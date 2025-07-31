@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bke2ljalyqall"]
+
+[ext_resource type="PackedScene" uid="uid://d1ivrwu5enh5" path="res://Arr_storage/arrow_fall.tscn" id="1_pxn4w"]
+
+[node name="Falling_Arr" instance=ExtResource("1_pxn4w")]
+
+[node name="NewBetterArrows" parent="." index="0"]
+position = Vector2(43, 57)
+frame = 7

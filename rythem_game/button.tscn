@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcykl28nwbofe"]
+
+[ext_resource type="Script" path="res://scripts/button_temp.gd" id="1_d6i37"]
+[ext_resource type="Texture2D" uid="uid://bo7dngh20g6fh" path="res://resorces/no_pain_no_grain.png" id="2_gex4k"]
+
+[node name="Button" type="Button"]
+z_index = 2
+anchors_preset = -1
+anchor_right = 0.161
+anchor_bottom = 0.073
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 0.527985
+offset_bottom = -0.304005
+text = "No pain no grain"
+script = ExtResource("1_d6i37")
+
+[node name="NoPainNoGrain" type="Sprite2D" parent="."]
+position = Vector2(3, 22)
+rotation = -0.296828
+scale = Vector2(0.0800971, 0.0706522)
+texture = ExtResource("2_gex4k")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

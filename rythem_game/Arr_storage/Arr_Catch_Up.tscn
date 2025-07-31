@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkjy73y65of5j"]
+
+[ext_resource type="PackedScene" uid="uid://bf3tsqfdy2pxn" path="res://Arr_storage/Arr_Catch_Down.tscn" id="1_gk6qy"]
+[ext_resource type="Script" path="res://Arr_storage/Arr_Catch_Up.gd" id="2_8xxkd"]
+
+[node name="Area2D" instance=ExtResource("1_gk6qy")]
+script = ExtResource("2_8xxkd")
+
+[node name="NewBetterArrows" parent="." index="0"]
+position = Vector2(58, 48)
+rotation = -2.14413
+frame = 2
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(50, 46)
+
+[node name="NewBetterArrows2" parent="." index="2"]
+position = Vector2(52, 54)
+rotation = -1.57416
+frame = 3

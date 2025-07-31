@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://djnwfb5i5y1vn"]
+
+[ext_resource type="Texture2D" uid="uid://cuvrj3k4c5cq1" path="res://resorces/settings_bread copy.png" id="1_5hlnn"]
+[ext_resource type="PackedScene" uid="uid://dossj6btws21r" path="res://button_exit.tscn" id="2_8ddjp"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(-5, -670)
+
+[node name="SettingsBreadCopy" type="Sprite2D" parent="."]
+position = Vector2(584, 1039)
+scale = Vector2(0.703613, 0.722656)
+texture = ExtResource("1_5hlnn")
+
+[node name="Button" parent="." instance=ExtResource("2_8ddjp")]
+offset_left = 387.0
+offset_top = 1155.0
+offset_right = 563.0
+offset_bottom = 1222.0
+text = "
+
+"

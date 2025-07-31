@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://w133jugyc5es"]
+
+[ext_resource type="PackedScene" uid="uid://d1ivrwu5enh5" path="res://Arr_storage/arrow_fall.tscn" id="1_iawrm"]
+
+[node name="Falling_Arr" instance=ExtResource("1_iawrm")]
+position = Vector2(7, -12)
+
+[node name="NewBetterArrows" parent="." index="0"]
+position = Vector2(56, 53)
+scale = Vector2(0.810673, 0.927746)
+frame = 5
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(52, 53)

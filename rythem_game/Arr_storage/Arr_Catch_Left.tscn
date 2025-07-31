@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://by1p3fy77kl4r"]
+
+[ext_resource type="Script" path="res://Arr_storage/Arr_Catch_Left.gd" id="1_uk7w6"]
+[ext_resource type="Texture2D" uid="uid://j2r6qgrbcbcv" path="res://resorces/new better arrows.png" id="2_x345s"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mpxdu"]
+radius = 51.0
+height = 114.0
+
+[node name="Catcher" type="Area2D"]
+script = ExtResource("1_uk7w6")
+
+[node name="NewBetterArrows" type="Sprite2D" parent="."]
+position = Vector2(77.375, 54.5)
+scale = Vector2(0.919591, 0.780347)
+texture = ExtResource("2_x345s")
+hframes = 4
+vframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(66, 46)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_mpxdu")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://dossj6btws21r"]
+
+[ext_resource type="Script" path="res://scripts/button_exit.gd" id="1_gx22q"]
+
+[node name="Button" type="Button"]
+z_index = 2
+anchors_preset = -1
+anchor_right = 0.161
+anchor_bottom = 0.073
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 0.527985
+offset_bottom = -0.304005
+text = "exit
+"
+script = ExtResource("1_gx22q")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
