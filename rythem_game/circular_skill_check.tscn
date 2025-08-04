@@ -28,3 +28,13 @@ texture = ExtResource("4_gn6od")
 
 [node name="Pointer" type="Sprite2D" parent="Circle"]
 texture = ExtResource("5_hvy81")
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.035
+anchor_bottom = 0.035
+offset_left = 334.0
+offset_top = 160.0
+offset_right = 333.68
+offset_bottom = 160.32

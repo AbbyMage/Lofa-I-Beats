@@ -13,6 +13,9 @@ extends Control
 
 const DECAY_DELAY = 1.8  # time before speedo decay
 
+const POINTS_TO_WIN = 30
+var score = 0
+
 var pointer_speed = 0.0
 var going_right = true
 var time_since_perfect = 0.0
@@ -21,8 +24,10 @@ var time_since_perfect = 0.0
 @onready var pointer = $pointer
 @onready var good_zone = $Goodzone
 @onready var perfect_zone = $perfect
+@onready var score_label = $ScoreLabel
 
 func _ready():
+	update_score_lable()
 	randomize()
 	pointer_speed = base_speed
 	setup_zones()
@@ -72,12 +77,18 @@ func _process(delta):
 
 # input (space bar goes brrr)
 func _unhandled_input(event):
+	
+
 	if event.is_action_pressed("ui_accept"):
 		if is_in_zone(perfect_zone):
+			score += 2 
+			update_score_lable()
 			print("PERFECT!")
 			pointer_speed = min(pointer_speed + speed_increase, max_speed)
 			time_since_perfect = 0.0
 		elif is_in_zone(good_zone):
+			score += 1  
+			update_score_lable()
 			print("Meh could be better!")
 		else:
 			print("Dissapoingting!")
@@ -92,3 +103,6 @@ func is_in_zone(zone: ColorRect) -> bool:
 	var zone_left = zone.position.x
 	var zone_right = zone.position.x + zone.size.x
 	return pointer_x >= zone_left and pointer_x <= zone_right
+	
+func update_score_lable():
+	score_label.text = "Score: " + str(score) + " / " + str(POINTS_TO_WIN)

@@ -1,5 +1,7 @@
 extends Control
 
+const POINTS_TO_WIN = 30
+var score = 0
 
 const min_rot: float = deg_to_rad(180)
 const max_rot: float = deg_to_rad(-180)
@@ -23,9 +25,12 @@ var pointer_rot: float
 @onready var perfect: Node = get_node("Circle/Perfect")
 @onready var pointer: Node = get_node("Circle/Pointer")
 
-func _ready() -> void:
-	_set_pos()
+@onready var score_label = $ScoreLabel
 
+func _ready() -> void:
+	update_score_lable()
+	_set_pos()
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -41,9 +46,13 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("space"):
 		if pointer_rot >= perfect_min_offset and pointer_rot <= perfect_max_offset:
 			print("perfect")
+			score += 2 
+			update_score_lable()
 		else:
 			if pointer_rot >= good_min_offset and pointer_rot <= good_max_offset:
 				print("good")
+				score += 1  
+				update_score_lable()
 			else:
 				print("miss")
 		_set_pos()
@@ -67,3 +76,5 @@ func _set_pos() -> void:
 	
 	
 	
+func update_score_lable():
+	score_label.text = "Score: " + str(score) + " / " + str(POINTS_TO_WIN)
