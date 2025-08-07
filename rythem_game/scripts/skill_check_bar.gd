@@ -77,9 +77,7 @@ func _process(delta):
 
 # input (space bar goes brrr)
 func _unhandled_input(event):
-	
-
-	if event.is_action_pressed("ui_accept"):
+	if event.is_action_pressed("space") and get_parent().current_game == self.name:
 		if is_in_zone(perfect_zone):
 			score += 2 
 			update_score_lable()

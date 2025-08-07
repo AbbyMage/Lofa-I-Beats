@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dtdfflhwfbfcc"]
+[gd_scene load_steps=9 format=3 uid="uid://dtdfflhwfbfcc"]
 
 [ext_resource type="PackedScene" uid="uid://bf3tsqfdy2pxn" path="res://Arr_storage/Arr_Catch_Down.tscn" id="1_oertb"]
 [ext_resource type="PackedScene" uid="uid://by1p3fy77kl4r" path="res://Arr_storage/Arr_Catch_Left.tscn" id="2_fvj8h"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://w133jugyc5es" path="res://falling arrows/falling_arr_down.tscn" id="6_oudfr"]
 [ext_resource type="PackedScene" uid="uid://bke2ljalyqall" path="res://falling arrows/falling_arr_right.tscn" id="7_pnthc"]
 [ext_resource type="PackedScene" uid="uid://basj7riyo3xvc" path="res://falling_arr_upeys.tscn" id="8_m8s7g"]
-[ext_resource type="PackedScene" uid="uid://c2g2oc2g155ur" path="res://timer.tscn" id="9_fkmxp"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(0, -22)
@@ -78,221 +77,214 @@ offset_right = 3500.0
 offset_bottom = -6534.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(577, 322)
-rotation = -6.28319
+[node name="do not open" type="Node" parent="."]
 
-[node name="Node" type="Node" parent="."]
-
-[node name="Falling_Arr2" parent="Node" instance=ExtResource("5_60wjo")]
+[node name="Falling_Arr2" parent="do not open" instance=ExtResource("5_60wjo")]
 position = Vector2(331, -1716)
 
-[node name="Falling_Arr4" parent="Node" instance=ExtResource("5_60wjo")]
+[node name="Falling_Arr4" parent="do not open" instance=ExtResource("5_60wjo")]
 position = Vector2(326, -1113)
 
-[node name="Falling_Arr5" parent="Node" instance=ExtResource("6_oudfr")]
+[node name="Falling_Arr5" parent="do not open" instance=ExtResource("6_oudfr")]
 position = Vector2(469, -1922)
 
-[node name="Falling_Arr6" parent="Node" instance=ExtResource("6_oudfr")]
+[node name="Falling_Arr6" parent="do not open" instance=ExtResource("6_oudfr")]
 position = Vector2(462, -1318)
 
-[node name="Falling_Arr9" parent="Node" instance=ExtResource("7_pnthc")]
+[node name="Falling_Arr9" parent="do not open" instance=ExtResource("7_pnthc")]
 position = Vector2(719, -1509)
 
-[node name="Falling_Arr10" parent="Node" instance=ExtResource("8_m8s7g")]
+[node name="Falling_Arr10" parent="do not open" instance=ExtResource("8_m8s7g")]
 position = Vector2(585, -876)
 
-[node name="Falling_Arr11" parent="Node" instance=ExtResource("5_60wjo")]
+[node name="Falling_Arr11" parent="do not open" instance=ExtResource("5_60wjo")]
 position = Vector2(331, -2176)
 
-[node name="Falling_Arr12" parent="Node" instance=ExtResource("8_m8s7g")]
+[node name="Falling_Arr12" parent="do not open" instance=ExtResource("8_m8s7g")]
 position = Vector2(590, -2421)
 
-[node name="Falling_Arr13" parent="Node" instance=ExtResource("8_m8s7g")]
+[node name="Falling_Arr13" parent="do not open" instance=ExtResource("8_m8s7g")]
 position = Vector2(592, -3019)
 
-[node name="Falling_Arr14" parent="Node" instance=ExtResource("5_60wjo")]
+[node name="Falling_Arr14" parent="do not open" instance=ExtResource("5_60wjo")]
 position = Vector2(321, -3021)
 
-[node name="Falling_Arr15" parent="Node" instance=ExtResource("7_pnthc")]
+[node name="Falling_Arr15" parent="do not open" instance=ExtResource("7_pnthc")]
 position = Vector2(727, -3281)
 
-[node name="Falling_Arr16" parent="Node" instance=ExtResource("5_60wjo")]
+[node name="Falling_Arr16" parent="do not open" instance=ExtResource("5_60wjo")]
 position = Vector2(336, -3524)
 
-[node name="Falling_Arr17" parent="Node" instance=ExtResource("7_pnthc")]
+[node name="Falling_Arr17" parent="do not open" instance=ExtResource("7_pnthc")]
 position = Vector2(738, -3517)
 
-[node name="Falling_Arr18" parent="Node" instance=ExtResource("8_m8s7g")]
+[node name="Falling_Arr18" parent="do not open" instance=ExtResource("8_m8s7g")]
 position = Vector2(593, -3731)
 
-[node name="Falling_Arr19" parent="Node" instance=ExtResource("6_oudfr")]
+[node name="Falling_Arr19" parent="do not open" instance=ExtResource("6_oudfr")]
 position = Vector2(465, -3992)
 
-[node name="Falling_Arr20" parent="Node" instance=ExtResource("6_oudfr")]
+[node name="Falling_Arr20" parent="do not open" instance=ExtResource("6_oudfr")]
 position = Vector2(464, -4251)
 
-[node name="Falling_Arr21" parent="Node" instance=ExtResource("5_60wjo")]
+[node name="Falling_Arr21" parent="do not open" instance=ExtResource("5_60wjo")]
 position = Vector2(334, -4249)
 
-[node name="Falling_Arr22" parent="Node" instance=ExtResource("6_oudfr")]
+[node name="Falling_Arr22" parent="do not open" instance=ExtResource("6_oudfr")]
 position = Vector2(462, -4503)
 
-[node name="Falling_Arr23" parent="Node" instance=ExtResource("8_m8s7g")]
+[node name="Falling_Arr23" parent="do not open" instance=ExtResource("8_m8s7g")]
 position = Vector2(592, -4503)
 
-[node name="Falling_Arr24" parent="Node" instance=ExtResource("6_oudfr")]
+[node name="Falling_Arr24" parent="do not open" instance=ExtResource("6_oudfr")]
 position = Vector2(463, -4759)
 
-[node name="Falling_Arr25" parent="Node" instance=ExtResource("7_pnthc")]
+[node name="Falling_Arr25" parent="do not open" instance=ExtResource("7_pnthc")]
 position = Vector2(723, -4760)
 
-[node name="Falling_Arr26" parent="Node" instance=ExtResource("8_m8s7g")]
+[node name="Falling_Arr26" parent="do not open" instance=ExtResource("8_m8s7g")]
 position = Vector2(587, -5344)
 
-[node name="Falling_Arr27" parent="Node" instance=ExtResource("5_60wjo")]
+[node name="Falling_Arr27" parent="do not open" instance=ExtResource("5_60wjo")]
 position = Vector2(330, -5225)
 
-[node name="Falling_Arr28" parent="Node" instance=ExtResource("6_oudfr")]
+[node name="Falling_Arr28" parent="do not open" instance=ExtResource("6_oudfr")]
 position = Vector2(465, -5603)
 
-[node name="Falling_Arr29" parent="Node" instance=ExtResource("7_pnthc")]
+[node name="Falling_Arr29" parent="do not open" instance=ExtResource("7_pnthc")]
 position = Vector2(720, -5725)
 
-[node name="Falling_Arr30" parent="Node" instance=ExtResource("8_m8s7g")]
+[node name="Falling_Arr30" parent="do not open" instance=ExtResource("8_m8s7g")]
 position = Vector2(590, -5974)
 
-[node name="Falling_Arr31" parent="Node" instance=ExtResource("6_oudfr")]
+[node name="Falling_Arr31" parent="do not open" instance=ExtResource("6_oudfr")]
 position = Vector2(461, -6104)
 
-[node name="Falling_Arr32" parent="Node" instance=ExtResource("5_60wjo")]
+[node name="Falling_Arr32" parent="do not open" instance=ExtResource("5_60wjo")]
 position = Vector2(333, -6221)
 
-[node name="Falling_Arr33" parent="Node" instance=ExtResource("7_pnthc")]
+[node name="Falling_Arr33" parent="do not open" instance=ExtResource("7_pnthc")]
 position = Vector2(727, -6342)
 
-[node name="Falling_Arr34" parent="Node" instance=ExtResource("8_m8s7g")]
+[node name="Falling_Arr34" parent="do not open" instance=ExtResource("8_m8s7g")]
 position = Vector2(586, -6468)
 
-[node name="Falling_Arr35" parent="Node" instance=ExtResource("6_oudfr")]
+[node name="Falling_Arr35" parent="do not open" instance=ExtResource("6_oudfr")]
 position = Vector2(464, -6591)
 
-[node name="Falling_Arr36" parent="Node" instance=ExtResource("5_60wjo")]
+[node name="Falling_Arr36" parent="do not open" instance=ExtResource("5_60wjo")]
 position = Vector2(331, -6708)
 
-[node name="Falling_Arr37" parent="Node" instance=ExtResource("7_pnthc")]
+[node name="Falling_Arr37" parent="do not open" instance=ExtResource("7_pnthc")]
 position = Vector2(721, -7029)
 
-[node name="Falling_Arr38" parent="Node" instance=ExtResource("8_m8s7g")]
+[node name="Falling_Arr38" parent="do not open" instance=ExtResource("8_m8s7g")]
 position = Vector2(585, -7034)
 
-[node name="Falling_Arr39" parent="Node" instance=ExtResource("5_60wjo")]
+[node name="Falling_Arr39" parent="do not open" instance=ExtResource("5_60wjo")]
 position = Vector2(327, -7029)
 
-[node name="Falling_Arr3" parent="Node" instance=ExtResource("5_60wjo")]
+[node name="Falling_Arr3" parent="do not open" instance=ExtResource("5_60wjo")]
 position = Vector2(336, -8487)
 
-[node name="Falling_Arr7" parent="Node" instance=ExtResource("5_60wjo")]
+[node name="Falling_Arr7" parent="do not open" instance=ExtResource("5_60wjo")]
 position = Vector2(342, -7887)
 
-[node name="Falling_Arr8" parent="Node" instance=ExtResource("6_oudfr")]
+[node name="Falling_Arr8" parent="do not open" instance=ExtResource("6_oudfr")]
 position = Vector2(465, -8696)
 
-[node name="Falling_Arr40" parent="Node" instance=ExtResource("6_oudfr")]
+[node name="Falling_Arr40" parent="do not open" instance=ExtResource("6_oudfr")]
 position = Vector2(457, -8098)
 
-[node name="Falling_Arr41" parent="Node" instance=ExtResource("7_pnthc")]
+[node name="Falling_Arr41" parent="do not open" instance=ExtResource("7_pnthc")]
 position = Vector2(722, -8288)
 
-[node name="Falling_Arr42" parent="Node" instance=ExtResource("8_m8s7g")]
+[node name="Falling_Arr42" parent="do not open" instance=ExtResource("8_m8s7g")]
 position = Vector2(590, -7643)
 
-[node name="Falling_Arr43" parent="Node" instance=ExtResource("5_60wjo")]
+[node name="Falling_Arr43" parent="do not open" instance=ExtResource("5_60wjo")]
 position = Vector2(334, -8953)
 
-[node name="Falling_Arr44" parent="Node" instance=ExtResource("8_m8s7g")]
+[node name="Falling_Arr44" parent="do not open" instance=ExtResource("8_m8s7g")]
 position = Vector2(588, -9195)
 
-[node name="Falling_Arr45" parent="Node" instance=ExtResource("8_m8s7g")]
+[node name="Falling_Arr45" parent="do not open" instance=ExtResource("8_m8s7g")]
 position = Vector2(591, -9571)
 
-[node name="Falling_Arr46" parent="Node" instance=ExtResource("5_60wjo")]
+[node name="Falling_Arr46" parent="do not open" instance=ExtResource("5_60wjo")]
 position = Vector2(338, -9570)
 
-[node name="Falling_Arr47" parent="Node" instance=ExtResource("7_pnthc")]
+[node name="Falling_Arr47" parent="do not open" instance=ExtResource("7_pnthc")]
 position = Vector2(723, -9835)
 
-[node name="Falling_Arr48" parent="Node" instance=ExtResource("5_60wjo")]
+[node name="Falling_Arr48" parent="do not open" instance=ExtResource("5_60wjo")]
 position = Vector2(335, -10076)
 
-[node name="Falling_Arr49" parent="Node" instance=ExtResource("7_pnthc")]
+[node name="Falling_Arr49" parent="do not open" instance=ExtResource("7_pnthc")]
 position = Vector2(723, -10069)
 
-[node name="Falling_Arr50" parent="Node" instance=ExtResource("8_m8s7g")]
+[node name="Falling_Arr50" parent="do not open" instance=ExtResource("8_m8s7g")]
 position = Vector2(592, -10283)
 
-[node name="Falling_Arr51" parent="Node" instance=ExtResource("6_oudfr")]
+[node name="Falling_Arr51" parent="do not open" instance=ExtResource("6_oudfr")]
 position = Vector2(462, -10544)
 
-[node name="Falling_Arr52" parent="Node" instance=ExtResource("6_oudfr")]
+[node name="Falling_Arr52" parent="do not open" instance=ExtResource("6_oudfr")]
 position = Vector2(464, -10803)
 
-[node name="Falling_Arr53" parent="Node" instance=ExtResource("5_60wjo")]
+[node name="Falling_Arr53" parent="do not open" instance=ExtResource("5_60wjo")]
 position = Vector2(331, -10804)
 
-[node name="Falling_Arr54" parent="Node" instance=ExtResource("6_oudfr")]
+[node name="Falling_Arr54" parent="do not open" instance=ExtResource("6_oudfr")]
 position = Vector2(461, -11055)
 
-[node name="Falling_Arr55" parent="Node" instance=ExtResource("8_m8s7g")]
+[node name="Falling_Arr55" parent="do not open" instance=ExtResource("8_m8s7g")]
 position = Vector2(591, -11055)
 
-[node name="Falling_Arr56" parent="Node" instance=ExtResource("6_oudfr")]
+[node name="Falling_Arr56" parent="do not open" instance=ExtResource("6_oudfr")]
 position = Vector2(462, -11311)
 
-[node name="Falling_Arr57" parent="Node" instance=ExtResource("7_pnthc")]
+[node name="Falling_Arr57" parent="do not open" instance=ExtResource("7_pnthc")]
 position = Vector2(722, -11312)
 
-[node name="Falling_Arr58" parent="Node" instance=ExtResource("8_m8s7g")]
+[node name="Falling_Arr58" parent="do not open" instance=ExtResource("8_m8s7g")]
 position = Vector2(587, -12659)
 
-[node name="Falling_Arr59" parent="Node" instance=ExtResource("5_60wjo")]
+[node name="Falling_Arr59" parent="do not open" instance=ExtResource("5_60wjo")]
 position = Vector2(330, -12540)
 
-[node name="Falling_Arr60" parent="Node" instance=ExtResource("6_oudfr")]
+[node name="Falling_Arr60" parent="do not open" instance=ExtResource("6_oudfr")]
 position = Vector2(465, -12918)
 
-[node name="Falling_Arr61" parent="Node" instance=ExtResource("7_pnthc")]
+[node name="Falling_Arr61" parent="do not open" instance=ExtResource("7_pnthc")]
 position = Vector2(720, -13040)
 
-[node name="Falling_Arr62" parent="Node" instance=ExtResource("8_m8s7g")]
+[node name="Falling_Arr62" parent="do not open" instance=ExtResource("8_m8s7g")]
 position = Vector2(590, -13289)
 
-[node name="Falling_Arr63" parent="Node" instance=ExtResource("6_oudfr")]
+[node name="Falling_Arr63" parent="do not open" instance=ExtResource("6_oudfr")]
 position = Vector2(461, -13419)
 
-[node name="Falling_Arr64" parent="Node" instance=ExtResource("5_60wjo")]
+[node name="Falling_Arr64" parent="do not open" instance=ExtResource("5_60wjo")]
 position = Vector2(333, -13536)
 
-[node name="Falling_Arr65" parent="Node" instance=ExtResource("7_pnthc")]
+[node name="Falling_Arr65" parent="do not open" instance=ExtResource("7_pnthc")]
 position = Vector2(727, -13657)
 
-[node name="Falling_Arr66" parent="Node" instance=ExtResource("8_m8s7g")]
+[node name="Falling_Arr66" parent="do not open" instance=ExtResource("8_m8s7g")]
 position = Vector2(586, -13783)
 
-[node name="Falling_Arr67" parent="Node" instance=ExtResource("6_oudfr")]
+[node name="Falling_Arr67" parent="do not open" instance=ExtResource("6_oudfr")]
 position = Vector2(464, -13906)
 
-[node name="Falling_Arr68" parent="Node" instance=ExtResource("5_60wjo")]
+[node name="Falling_Arr68" parent="do not open" instance=ExtResource("5_60wjo")]
 position = Vector2(331, -14023)
 
-[node name="Falling_Arr69" parent="Node" instance=ExtResource("7_pnthc")]
+[node name="Falling_Arr69" parent="do not open" instance=ExtResource("7_pnthc")]
 position = Vector2(721, -14344)
 
-[node name="Falling_Arr70" parent="Node" instance=ExtResource("8_m8s7g")]
+[node name="Falling_Arr70" parent="do not open" instance=ExtResource("8_m8s7g")]
 position = Vector2(585, -14349)
 
-[node name="Falling_Arr71" parent="Node" instance=ExtResource("5_60wjo")]
+[node name="Falling_Arr71" parent="do not open" instance=ExtResource("5_60wjo")]
 position = Vector2(327, -14344)
-
-[node name="Node2D" parent="." instance=ExtResource("9_fkmxp")]
-position = Vector2(-2, 607)

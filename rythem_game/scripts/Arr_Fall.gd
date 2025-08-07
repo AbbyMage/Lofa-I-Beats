@@ -4,14 +4,29 @@ var fall_velocity: float = 0.0
 var is_paused: bool = false
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_accept"):  # Space bar pause
+	if Input.is_action_just_pressed("2"):
+		visible = false 
+		is_paused = true
+		is_paused = !is_paused
+	elif  Input.is_action_just_pressed("3"):
+		visible = false
+		is_paused = true
+	elif  Input.is_action_just_pressed("1"):
+		visible = true
+		is_paused = false
+		
+	if Input.is_action_just_pressed("p"):  # Space bar pause
 		is_paused = !is_paused
 
 	if is_paused:
 		return  
 
-	# keep velocity 
+
 	fall_velocity += 35 * delta
 
-	# Move downward
+
 	position.y += fall_velocity * delta
+
+	
+	
+	

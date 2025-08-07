@@ -6,7 +6,7 @@ var hover_color := Color(1, 0.5, 0.5)
 var normal_color := Color(1, 1, 1)    
 
 # Change this to the path of your target scene
-const TARGET_SCENE_PATH := "res://tutorial.tscn"
+const TARGET_SCENE_PATH := "res://scenae/tutorial.tscn"
 
 func _ready():
 	original_scale = scale
@@ -22,4 +22,4 @@ func _on_mouse_exited():
 
 func _on_pressed():
 	print("pressed")
-	get_tree().change_scene_to_file("res://tutorial.tscn")
+	get_tree().change_scene_to_file("res://scenae/tutorial.tscn")

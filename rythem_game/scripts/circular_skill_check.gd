@@ -1,5 +1,5 @@
 extends Control
-
+#andrew helped me figure out what was wroung and fix my code in this bit i dint have them all set the same 
 const POINTS_TO_WIN = 30
 var score = 0
 
@@ -43,7 +43,8 @@ func _process(_delta: float) -> void:
 		pointer.rotation += -pointer_speed
 	
 	var perfect_
-	if Input.is_action_just_pressed("space"):
+	
+	if Input.is_action_just_pressed("space") and get_parent().current_game == self.name:
 		if pointer_rot >= perfect_min_offset and pointer_rot <= perfect_max_offset:
 			print("perfect")
 			score += 2 
@@ -66,15 +67,6 @@ func _set_pos() -> void:
 	
 	perfect_max_offset = good.rotation + perfect_width
 	perfect_min_offset = good.rotation - perfect_width
-	
-	#print("good max: " + str(good_max_offset))
-	#print("good min: " + str(good_min_offset))
-	#print("P max: " + str(perfect_max_offset))
-	#print("P min: " + str(perfect_min_offset))
-	#print("pointer rot: " + str(pointer_rot))
-	#print("---------------")
-	
-	
 	
 func update_score_lable():
 	score_label.text = "Score: " + str(score) + " / " + str(POINTS_TO_WIN)

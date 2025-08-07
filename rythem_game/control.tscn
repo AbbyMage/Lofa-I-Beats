@@ -10,6 +10,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_a4111")
+perfect_zone_width = 20.0
 
 [node name="Bar" type="ColorRect" parent="."]
 layout_mode = 0

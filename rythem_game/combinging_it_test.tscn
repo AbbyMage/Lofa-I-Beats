@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://8iu2j46l8cuj"]
+
+[ext_resource type="Script" path="res://gamemode.gd" id="1_arw0c"]
+[ext_resource type="PackedScene" uid="uid://uq3c3iq0ogk3" path="res://control.tscn" id="2_5g4x7"]
+[ext_resource type="PackedScene" uid="uid://dw0vnf1qp6ux6" path="res://circular_skill_check.tscn" id="3_8tf2w"]
+[ext_resource type="PackedScene" uid="uid://dtdfflhwfbfcc" path="res://scenae/tutorial.tscn" id="4_0fy0l"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 201.0
+offset_top = -137.0
+offset_right = 201.0
+offset_bottom = -137.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_arw0c")
+
+[node name="bar" parent="." instance=ExtResource("2_5g4x7")]
+layout_mode = 1
+offset_left = 114.0
+offset_top = 388.0
+offset_right = 114.0
+offset_bottom = 388.0
+
+[node name="circle" parent="." instance=ExtResource("3_8tf2w")]
+layout_mode = 1
+offset_left = -35.0
+offset_top = 191.0
+offset_right = -35.0
+offset_bottom = 191.0
+
+[node name="Node2D" parent="." instance=ExtResource("4_0fy0l")]
+position = Vector2(-198, 136)
