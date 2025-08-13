@@ -81,15 +81,15 @@ func _unhandled_input(event):
 		if is_in_zone(perfect_zone):
 			score += 2 
 			update_score_lable()
-			print("PERFECT!")
+			print("Perfect!")
 			pointer_speed = min(pointer_speed + speed_increase, max_speed)
 			time_since_perfect = 0.0
 		elif is_in_zone(good_zone):
 			score += 1  
 			update_score_lable()
-			print("Meh could be better!")
+			print("Good!")
 		else:
-			print("Dissapoingting!")
+			print("Miss!")
 			pointer_speed = slow_speed
 			time_since_perfect = 0.0
 

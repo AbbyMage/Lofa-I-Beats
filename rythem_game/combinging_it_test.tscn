@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://8iu2j46l8cuj"]
+[gd_scene load_steps=9 format=3 uid="uid://8iu2j46l8cuj"]
 
 [ext_resource type="Script" path="res://gamemode.gd" id="1_arw0c"]
 [ext_resource type="PackedScene" uid="uid://uq3c3iq0ogk3" path="res://control.tscn" id="2_5g4x7"]
 [ext_resource type="PackedScene" uid="uid://dw0vnf1qp6ux6" path="res://circular_skill_check.tscn" id="3_8tf2w"]
-[ext_resource type="PackedScene" uid="uid://dtdfflhwfbfcc" path="res://scenae/tutorial.tscn" id="4_0fy0l"]
+[ext_resource type="PackedScene" uid="uid://bf3tsqfdy2pxn" path="res://Arr_storage/Arr_Catch_Down.tscn" id="5_fd4dr"]
+[ext_resource type="PackedScene" uid="uid://by1p3fy77kl4r" path="res://Arr_storage/Arr_Catch_Left.tscn" id="6_qf4ru"]
+[ext_resource type="PackedScene" uid="uid://baop2v0fhii33" path="res://Arr_storage/arr_Catch_right.tscn" id="7_4bq0w"]
+[ext_resource type="PackedScene" uid="uid://crxj4auvkmcxc" path="res://arrow_spawner.tscn" id="8_llikp"]
+[ext_resource type="PackedScene" uid="uid://bkjy73y65of5j" path="res://Arr_storage/Arr_Catch_Up.tscn" id="8_tofvn"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -20,10 +24,12 @@ script = ExtResource("1_arw0c")
 
 [node name="bar" parent="." instance=ExtResource("2_5g4x7")]
 layout_mode = 1
-offset_left = 114.0
-offset_top = 388.0
-offset_right = 114.0
-offset_bottom = 388.0
+anchors_preset = -1
+anchor_left = 0.0989583
+anchor_top = 0.726852
+anchor_right = 0.53125
+anchor_bottom = 1.09722
+metadata/_edit_use_anchors_ = true
 
 [node name="circle" parent="." instance=ExtResource("3_8tf2w")]
 layout_mode = 1
@@ -32,5 +38,17 @@ offset_top = 191.0
 offset_right = -35.0
 offset_bottom = 191.0
 
-[node name="Node2D" parent="." instance=ExtResource("4_0fy0l")]
-position = Vector2(-198, 136)
+[node name="down" parent="." instance=ExtResource("5_fd4dr")]
+position = Vector2(243, 676)
+
+[node name="left" parent="." instance=ExtResource("6_qf4ru")]
+position = Vector2(95, 676)
+
+[node name="right" parent="." instance=ExtResource("7_4bq0w")]
+position = Vector2(543, 672)
+
+[node name="up" parent="." instance=ExtResource("8_tofvn")]
+position = Vector2(393, 676)
+
+[node name="Arrow spaner" parent="." instance=ExtResource("8_llikp")]
+position = Vector2(-108, -678)

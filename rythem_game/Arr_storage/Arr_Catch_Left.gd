@@ -2,6 +2,8 @@ extends Area2D
 
 var tracked_areas: Array[Area2D] = []
 
+@onready var control: Node = get_node("/root/Control")
+
 func _on_area_entered(area: Area2D) -> void:
 	if not tracked_areas.has(area):
 		tracked_areas.append(area)
@@ -18,4 +20,4 @@ func _process(_delta: float) -> void:
 				if is_instance_valid(area):
 					area.queue_free()
 			tracked_areas.clear()
-			print("ballin")
+			control._add_score()

@@ -1,0 +1,15 @@
+[gd_scene load_steps=6 format=3 uid="uid://crxj4auvkmcxc"]
+
+[ext_resource type="Script" path="res://arrow_spawner.gd" id="1_k88mm"]
+[ext_resource type="PackedScene" uid="uid://d1ivrwu5enh5" path="res://Arr_storage/arrow_fall.tscn" id="2_68620"]
+[ext_resource type="PackedScene" uid="uid://bke2ljalyqall" path="res://falling arrows/falling_arr_right.tscn" id="3_vud1s"]
+[ext_resource type="PackedScene" uid="uid://basj7riyo3xvc" path="res://falling_arr_upeys.tscn" id="4_kg713"]
+[ext_resource type="PackedScene" uid="uid://w133jugyc5es" path="res://falling arrows/falling_arr_down.tscn" id="5_51fy3"]
+
+[node name="Arrow spaner" type="Node2D"]
+position = Vector2(-2, 1)
+script = ExtResource("1_k88mm")
+left_arrow_scene = ExtResource("2_68620")
+right_arrow_scene = ExtResource("3_vud1s")
+up_arrow_scene = ExtResource("4_kg713")
+down_arrow_scene = ExtResource("5_51fy3")

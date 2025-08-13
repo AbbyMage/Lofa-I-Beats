@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://by1p3fy77kl4r" path="res://Arr_storage/Arr_Catch_Left.tscn" id="1_nugbr"]
 [ext_resource type="Script" path="res://Arr_storage/Arr_Catch_Down.gd" id="2_xqa7h"]
-[ext_resource type="Texture2D" uid="uid://j2r6qgrbcbcv" path="res://resorces/new better arrows.png" id="3_gku5p"]
+[ext_resource type="Texture2D" uid="uid://j2r6qgrbcbcv" path="res://resorces/arrows.png" id="3_gku5p"]
 
 [node name="Area2D" instance=ExtResource("1_nugbr")]
 script = ExtResource("2_xqa7h")
