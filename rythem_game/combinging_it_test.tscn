@@ -14,10 +14,6 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 201.0
-offset_top = -137.0
-offset_right = 201.0
-offset_bottom = -137.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_arw0c")
@@ -25,30 +21,30 @@ script = ExtResource("1_arw0c")
 [node name="bar" parent="." instance=ExtResource("2_5g4x7")]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0989583
-anchor_top = 0.726852
-anchor_right = 0.53125
-anchor_bottom = 1.09722
+anchor_left = 0.298611
+anchor_top = 0.429012
+anchor_right = 0.730903
+anchor_bottom = 0.79938
 metadata/_edit_use_anchors_ = true
 
 [node name="circle" parent="." instance=ExtResource("3_8tf2w")]
 layout_mode = 1
-offset_left = -35.0
-offset_top = 191.0
-offset_right = -35.0
-offset_bottom = 191.0
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 2.0
+offset_bottom = -1.0
 
 [node name="down" parent="." instance=ExtResource("5_fd4dr")]
-position = Vector2(243, 676)
+position = Vector2(524, 579)
 
 [node name="left" parent="." instance=ExtResource("6_qf4ru")]
-position = Vector2(95, 676)
+position = Vector2(387, 582)
 
 [node name="right" parent="." instance=ExtResource("7_4bq0w")]
-position = Vector2(543, 672)
+position = Vector2(835, 578)
 
 [node name="up" parent="." instance=ExtResource("8_tofvn")]
-position = Vector2(393, 676)
+position = Vector2(685, 578)
 
 [node name="Arrow spaner" parent="." instance=ExtResource("8_llikp")]
-position = Vector2(-108, -678)
+position = Vector2(185, -678)

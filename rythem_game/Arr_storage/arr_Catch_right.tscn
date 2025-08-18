@@ -7,5 +7,8 @@
 script = ExtResource("2_1dan5")
 
 [node name="NewBetterArrows" parent="." index="0"]
-position = Vector2(48, 57)
+position = Vector2(0, 0)
 frame = 3
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 0)

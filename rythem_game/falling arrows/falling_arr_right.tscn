@@ -5,5 +5,4 @@
 [node name="Falling_Arr" instance=ExtResource("1_pxn4w")]
 
 [node name="NewBetterArrows" parent="." index="0"]
-position = Vector2(43, 57)
 frame = 7

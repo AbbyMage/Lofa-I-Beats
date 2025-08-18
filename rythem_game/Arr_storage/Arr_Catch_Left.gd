@@ -18,6 +18,7 @@ func _process(_delta: float) -> void:
 		else:
 			for area in tracked_areas:
 				if is_instance_valid(area):
+					
 					area.queue_free()
 			tracked_areas.clear()
 			control._add_score()

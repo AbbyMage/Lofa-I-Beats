@@ -8,7 +8,7 @@ enum GameMode {
 var current_mode: GameMode = GameMode.fnf
 
 var score = 0
-var combo_max = 5
+var combo_max = 50
 
 @export var current_game: String = "fnf"
 
@@ -66,4 +66,5 @@ func _process(delta: float) -> void:
 	elif score == combo_max:
 		current_game = "bar"
 		switch_to_mode(GameMode.bar)
+		score = score - 50
 		

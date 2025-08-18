@@ -11,7 +11,6 @@ script = ExtResource("2_xqa7h")
 visible = false
 
 [node name="NewBetterArrows2" type="Sprite2D" parent="." index="2"]
-position = Vector2(61, 39)
 rotation = 1.56982
 scale = Vector2(0.919591, 0.780347)
 texture = ExtResource("3_gku5p")

@@ -7,8 +7,4 @@
 script = ExtResource("2_wyht3")
 
 [node name="NewBetterArrows" parent="." index="0"]
-position = Vector2(65, 57)
 frame = 4
-
-[node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(50, 52)

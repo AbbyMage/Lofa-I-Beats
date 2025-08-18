@@ -5,7 +5,17 @@ extends Node2D
 @export var up_arrow_scene: PackedScene
 @export var down_arrow_scene: PackedScene
 
+
+
 @export var spawn_list: Array[String] = [
+	"left", "blank", "up", "down", "blank", "right", 
+	"left", "up", "blank", "blank", "down", "right",
+	"left", "up", "down", "right", "blank", "left",
+	"up", "blank", "right", "down", "blank", "left",
+	"left", "up", "down", "blank", "right", "blank",
+	"up", "down", "right", "left", "blank", "blank",
+	"right", "down", "up", "left", "blank", "down",
+	"right", "up", "blank", "left", "down", "up",
 	"left", "blank", "up", "down", "blank", "right", 
 	"left", "up", "blank", "blank", "down", "right",
 	"left", "up", "down", "right", "blank", "left",
@@ -17,7 +27,7 @@ extends Node2D
 
 ]
 
-@export var spawn_interval = 0.9
+@export var spawn_interval = 0.5
 @export var start_y = 0.0
 
 @export var left_lane_x = 200.0
@@ -25,8 +35,8 @@ extends Node2D
 @export var down_lane_x = 350.0
 @export var right_lane_x = 650.0
 
-var base_fall_velocity = 200.0
-var acceleration = 35.0
+var base_fall_velocity = 450.0
+var acceleration = 175.0
 
 var current_index = 0
 var timer = 0.0
@@ -45,7 +55,7 @@ func _process(delta: float) -> void:
 		return
 
 	if Input.is_action_just_pressed("j"):
-		acceleration_enabled = true  # toggle acceleration on permanently
+		acceleration_enabled = true  
 
 	# spawn arrows
 	timer += delta
@@ -59,7 +69,7 @@ func _process(delta: float) -> void:
 		current_index += 1
 
 	
-	for i in range(active_arrows.size() - 1, -1, -1):
+	for i in range(active_arrows.size() - 1, -1, -1): # i got help from andrew understand how to set up my for loop but i understand how it works and thats its telling all active arrows to check how they are falling 
 		var arrow_dict = active_arrows[i]
 		var arrow_node = arrow_dict["node"]
 
@@ -97,7 +107,7 @@ func spawn_arrow(direction: String) -> Node2D:
 		"right":
 			scene = right_arrow_scene
 			x_pos = right_lane_x
-		_:
+		_: 
 			return null
 
 	if scene:

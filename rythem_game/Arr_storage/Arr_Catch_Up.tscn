@@ -7,13 +7,8 @@
 script = ExtResource("2_8xxkd")
 
 [node name="NewBetterArrows" parent="." index="0"]
-position = Vector2(58, 48)
 rotation = -2.14413
 frame = 2
 
-[node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(50, 46)
-
 [node name="NewBetterArrows2" parent="." index="2"]
-position = Vector2(52, 54)
 rotation = -1.57416

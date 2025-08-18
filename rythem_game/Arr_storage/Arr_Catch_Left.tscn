@@ -11,14 +11,12 @@ height = 114.0
 script = ExtResource("1_uk7w6")
 
 [node name="NewBetterArrows" type="Sprite2D" parent="."]
-position = Vector2(77.375, 54.5)
 scale = Vector2(0.919591, 0.780347)
 texture = ExtResource("2_x345s")
 hframes = 4
 vframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(66, 46)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_mpxdu")
 
