@@ -1,12 +1,50 @@
-[gd_scene load_steps=2 format=3 uid="uid://bg7sjsnps4b0p"]
+[gd_scene load_steps=4 format=3 uid="uid://bg7sjsnps4b0p"]
 
 [ext_resource type="PackedScene" uid="uid://dcykl28nwbofe" path="res://button.tscn" id="1_4rikn"]
+[ext_resource type="Script" path="res://song_3_button.gd" id="2_sgu5j"]
+[ext_resource type="Script" path="res://button_2.gd" id="3_mv6p6"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 rotation = 0.00167188
 
-[node name="Button" parent="." instance=ExtResource("1_4rikn")]
-offset_left = 447.406
-offset_top = 242.252
-offset_right = 631.406
-offset_bottom = 288.252
+[node name="Song1Button" parent="." instance=ExtResource("1_4rikn")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 457.294
+offset_top = 175.236
+offset_right = 594.294
+offset_bottom = 206.236
+
+[node name="Song3Button" type="Button" parent="."]
+layout_mode = 2
+offset_left = 472.0
+offset_top = 304.0
+offset_right = 580.0
+offset_bottom = 335.0
+text = "lv3
+"
+script = ExtResource("2_sgu5j")
+
+[node name="Song2Button" type="Button" parent="."]
+layout_mode = 2
+offset_left = 463.0
+offset_top = 245.0
+offset_right = 587.0
+offset_bottom = 276.0
+text = "lv2 "
+script = ExtResource("3_mv6p6")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 133.0
+offset_top = -222.0
+offset_right = 908.0
+offset_bottom = -27.0
+text = "I should have done better but ive tried my hardest thanks for all that you taught me"
+
+[connection signal="pressed" from="Song3Button" to="Song3Button" method="_on_pressed"]
+[connection signal="pressed" from="Song2Button" to="Song2Button" method="_on_pressed"]

@@ -1,5 +1,5 @@
 extends Node2D
-#packed seans duh
+
 @export var left_arrow_scene: PackedScene
 @export var right_arrow_scene: PackedScene
 @export var up_arrow_scene: PackedScene
@@ -8,38 +8,40 @@ extends Node2D
 
 # my song list 
 @export var spawn_list: Array[String] = [
-	"left", "blank", "up", "down", "blank", "right", 
-	"left", "up", "blank", "blank", "down", "right",
+	"up", "blank", "left", "down", "right", "blank",
+	"up", "up", "down", "left", "blank", "right",
+	"left", "down", "blank", "up", "right", "blank",
+	"down", "right", "up", "left", "blank", "up",
+	"left", "blank", "right", "down", "up", "blank",
+	"down", "left", "up", "right", "blank", "blank",
+	"right", "up", "down", "left", "blank", "right",
+	"up", "blank", "down", "right", "left", "blank",
+	"left", "down", "blank", "up", "right", "up",
+	"blank", "right", "down", "left", "up", "blank",
+	"up", "left", "blank", "down", "right", "blank",
+	"down", "up", "left", "right", "blank", "up",
+	"right", "blank", "left", "down", "up", "blank",
+	"up", "right", "blank", "left", "down", "blank",
+	"left", "up", "right", "down", "blank", "blank",
+	"right", "up", "down", "left", "blank", "right",
+	"up", "left", "blank", "down", "right", "up",
+	"blank", "left", "down", "right", "up", "blank",
+	"down", "right", "blank", "left", "up", "down",
+	"right", "blank", "left", "up", "blank", "down",
+	"left", "up", "down", "right", "blank", "up",
+	"right", "blank", "left", "down", "up", "blank",
+	"up", "left", "blank", "right", "down", "blank",
 	"left", "up", "down", "right", "blank", "left",
-	"up", "blank", "right", "down", "blank", "left",
-	"left", "up", "down", "blank", "right", "blank",
-	"up", "down", "right", "left", "blank", "blank",
-	"right", "down", "up", "left", "blank", "down",
-	"right", "up", "blank", "left", "down", "up",
-	"left", "blank", "up", "down", "blank", "right", 
-	"left", "up", "blank", "blank", "down", "right",
-	"left", "up", "down", "right", "blank", "left",
-	"up", "blank", "right", "down", "blank", "left",
-	"left", "up", "down", "blank", "right", "blank",
-	"up", "down", "right", "left", "blank", "blank",
-	"right", "down", "up", "left", "blank", "down",
-	"right", "up", "blank", "left", "down", "up",
-	"left", "blank", "up", "down", "blank", "right", 
-	"left", "up", "blank", "blank", "down", "right",
-	"left", "up", "down", "right", "blank", "left",
-	"up", "blank", "right", "down", "blank", "left",
-	"left", "up", "down", "blank", "right", "blank",
-	"up", "down", "right", "left", "blank", "blank",
-	"right", "down", "up", "left", "blank", "down",
-	"right", "up", "blank", "left", "down", "up",
-	"left", "blank", "up", "down", "blank", "right", 
-	"left", "up", "blank", "blank", "down", "right",
-	"left", "up", "down", "right", "blank", "left",
-	"up", "blank", "right", "down", "blank", "left",
-	"left", "up", "down", "blank", "right", "blank",
-	"up", "down", "right", "left", "blank", "blank",
-	"right", "down", "up", "left", "blank", "down",
-	"right", "up", "blank", "left", "down", "up"
+	"up", "blank", "right", "down", "blank", "up",
+	"left", "down", "blank", "right", "up", "blank",
+	"down", "left", "up", "right", "blank", "right",
+	"up", "blank", "down", "left", "up", "blank",
+	"right", "down", "left", "up", "blank", "right",
+	"left", "blank", "up", "down", "right", "blank",
+	"up", "left", "down", "right", "blank", "up",
+	"right", "blank", "left", "down", "up", "blank",
+	"left", "up", "blank", "right", "down", "blank",
+	"up", "down", "left", "right", "blank", "up"
 
 ]
 #everything that can happen ot the arrows
@@ -62,10 +64,8 @@ var is_paused = false
 var acceleration_enabled = false
 
 var active_arrows = []
-
 #pause and acalrate 
 func _process(delta: float) -> void:
-
 	if Input.is_action_just_pressed("p"):
 		is_paused = !is_paused
 
@@ -103,11 +103,10 @@ func _process(delta: float) -> void:
 		# move arrow
 		arrow_node.position.y += arrow_dict["velocity"] * delta
 
-		#despawn 
+		# so thery dont exist in a sean forever after they travle a cetian distance they will dispawn 
 		if arrow_node.position.y > 1800:
 			arrow_node.queue_free()
 			active_arrows.remove_at(i)
-			
 # the lanes that each arrow will spawn in 
 func spawn_arrow(direction: String) -> Node2D:
 	var scene: PackedScene

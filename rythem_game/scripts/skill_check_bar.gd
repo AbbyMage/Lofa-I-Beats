@@ -1,6 +1,7 @@
 extends Control
 
 # variable i might change
+
 @export var base_speed = 300.0
 @export var max_speed = 600.0
 @export var slow_speed = 50.0
@@ -20,6 +21,7 @@ var pointer_speed = 0.0
 var going_right = true
 var time_since_perfect = 0.0
 
+@onready var control: Node = get_node("/root/Control")
 @onready var bar = $Bar
 @onready var pointer = $pointer
 @onready var good_zone = $Goodzone
@@ -84,9 +86,12 @@ func _unhandled_input(event):
 			print("Perfect!")
 			pointer_speed = min(pointer_speed + speed_increase, max_speed)
 			time_since_perfect = 0.0
+			control._add_score()
+			control._add_score()
 		elif is_in_zone(good_zone):
 			score += 1  
 			update_score_lable()
+			control._add_score()
 			print("Good!")
 		else:
 			print("Miss!")

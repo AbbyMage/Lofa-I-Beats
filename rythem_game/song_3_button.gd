@@ -4,8 +4,9 @@ var original_scale := Vector2.ONE
 var hover_scale := Vector2(1.1, 1.1)
 var hover_color := Color(1, 0.5, 0.5)  
 var normal_color := Color(1, 1, 1)    
-#tagert sean 
-const TARGET_SCENE_PATH = "res://lv1.tscn"
+
+# Change this to the path of your target scene
+const TARGET_SCENE_PATH = "res://lv3.tscn"
 
 func _ready():
 	original_scale = scale
@@ -21,4 +22,4 @@ func _on_mouse_exited():
 
 func _on_pressed():
 	print("pressed")
-	get_tree().change_scene_to_file("res://lv1.tscn")
+	get_tree().change_scene_to_file("res://lv3.tscn")

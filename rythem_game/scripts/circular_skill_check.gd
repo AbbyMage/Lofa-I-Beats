@@ -1,8 +1,7 @@
 extends Control
-#andrew helped me figure out what was wroung and fix my code in this bit i dint have them all set the same 
 const POINTS_TO_WIN = 30
 var score = 0
-
+#spin 
 const min_rot: float = deg_to_rad(180)
 const max_rot: float = deg_to_rad(-180)
 const max_good_offset: float = deg_to_rad(15)

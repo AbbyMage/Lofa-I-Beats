@@ -1,12 +1,12 @@
 extends Control
-
+#game modes
 enum GameMode {
 	fnf, 
 	circle, 
 	bar}
 	
 var current_mode: GameMode = GameMode.fnf
-
+#score stage
 var score = 0
 var stage_1 = 50
 var stage_2 = 80 
@@ -17,7 +17,7 @@ var stage_ = 150
 
 @onready var circle_skill_check = $circle
 @onready var bar_skill_check = $bar
-@onready var fnf_arrow_mode = $"Arrow spaner"
+@onready var fnf_arrow_mode = $Node
 @onready var up_arrow = $up
 @onready var down_arrow = $down
 @onready var left_arrow = $left

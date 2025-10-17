@@ -1,5 +1,5 @@
 extends Area2D
-
+#code for cahting arrows
 var tracked_areas: Array[Area2D] = []
 
 @onready var control: Node = get_node("/root/Control")
@@ -12,7 +12,8 @@ func _on_area_exited(area: Area2D) -> void:
 	tracked_areas.erase(area)
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("ui_right"):  # Left Arrow key
+	if Input.is_action_just_pressed("ui_right"):  # right Arrow key
+		
 		if tracked_areas.is_empty():
 			print("Empty!")
 		else:

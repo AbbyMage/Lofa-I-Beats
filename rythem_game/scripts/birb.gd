@@ -1,16 +1,25 @@
+
+# just ignor this did not end up using it but i thouhgot it was cool
+
+
+
+
+
+
+
 extends CharacterBody2D
 
-@export var follow_strength := 400.0      # acceleration toward mouse
-@export var max_speed := 1000.0           # speed cap
-@export var friction := 100.0             # ice friction
-@export var min_spin_speed := 1        # min radians per second spin
-@export var max_spin_speed := 1         # max radians per second spin
+@export var follow_strength = 400.0      # acceleration toward mouse
+@export var max_speed = 1000.0           # speed cap
+@export var friction = 100.0             # friction
+@export var min_spin_speed = 1        # min radians per second spin
+@export var max_spin_speed = 1         # max radians per second spin
 @export var spin_change_interval := 360   # seconds between spin speed changes
-@export var wall_bounciness := 1.0        # 1.0 = perfect bounce, 0.5 = soft bounce, etc.
+@export var wall_bounciness = 1.0        # 1.0 = perfect bounce, 0.5 = soft bounce, etc.
 
-var current_spin_speed := 0.0
-var spin_timer := 0.0
-var screen_size := Vector2.ZERO
+var current_spin_speed = 0.0
+var spin_timer = 0.0
+var screen_size = Vector2.ZERO
 
 func _ready() -> void:
 	_set_new_spin_speed()

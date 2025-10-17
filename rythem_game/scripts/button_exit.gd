@@ -1,11 +1,11 @@
 extends Button
-
+#my button code base
 var original_scale := Vector2.ONE
 var hover_scale := Vector2(1.1, 1.1)
 var hover_color := Color(1, 0.5, 0.5)  
 var normal_color := Color(1, 1, 1)    
 
-# Change this to the path of your target scene
+#taget sean 
 const TARGET_SCENE_PATH := "res://game_level.tscn"
 
 func _ready():
